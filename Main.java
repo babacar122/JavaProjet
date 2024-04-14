@@ -26,7 +26,7 @@ public class Main {
                     gestionUtilisateurs(); 
                     break;
                 case 4:
-                    System.out.println("Au revoir !");
+                    System.out.println("A bientot !");
                     break;
                 default:
                     System.out.println("Choix invalide, veuillez réessayer.");
@@ -72,7 +72,7 @@ public class Main {
         String auteur = scanner.nextLine();
         System.out.println("Année de publication :");
         int anneePublication = scanner.nextInt();
-        scanner.nextLine(); // Consommer le retour à la ligne
+        scanner.nextLine();
         System.out.println("ISBN :");
         String isbn = scanner.nextLine();
 
@@ -93,7 +93,7 @@ public class Main {
         String auteur = scanner.nextLine();
         System.out.println("Entrez l'année de publication :");
         int anneePublication = scanner.nextInt();
-        scanner.nextLine(); // Consommer le retour à la ligne
+        scanner.nextLine();
         System.out.println("Entrez l'ISBN :");
         String isbn = scanner.nextLine();
 
@@ -108,7 +108,7 @@ public class Main {
         do {
             menu.emprunt();
             choix = scanner.nextInt();
-            scanner.nextLine(); // Consommer le retour à la ligne
+            scanner.nextLine();
 
             switch (choix) {
                 case 1:
@@ -137,7 +137,7 @@ public class Main {
             String auteur = scanner.nextLine();
             System.out.println("Entrez l'année de publication :");
             int anneePublication = scanner.nextInt();
-            scanner.nextLine(); // Consommer le retour à la ligne
+            scanner.nextLine();
             System.out.println("Entrez l'ISBN :");
             String isbn = scanner.nextLine();
 
@@ -159,7 +159,7 @@ public class Main {
             String auteur = scanner.nextLine();
             System.out.println("Entrez l'année de publication :");
             int anneePublication = scanner.nextInt();
-            scanner.nextLine(); // Consommer le retour à la ligne
+            scanner.nextLine();
             System.out.println("Entrez l'ISBN :");
             String isbn = scanner.nextLine();
 
@@ -177,7 +177,7 @@ public class Main {
         do {
             menu.utilisateur();
             choix = scanner.nextInt();
-            scanner.nextLine(); // Consommer le retour à la ligne
+            scanner.nextLine();
 
             switch (choix) {
                 case 1:
@@ -200,10 +200,10 @@ public class Main {
         String nom = scanner.nextLine();
         System.out.println("Entrez le numéro d'identification :");
         int numeroIdentification = scanner.nextInt();
-        scanner.nextLine(); // Consommer le retour à la ligne
+        scanner.nextLine(); 
         System.out.println("L'utilisateur est-il éligible pour emprunter des livres ? (true/false)");
         boolean eligibleEmprunt = scanner.nextBoolean();
-        scanner.nextLine(); // Consommer le retour à la ligne
+        scanner.nextLine();
 
         Utilisateur utilisateur = new Utilisateur(nom, numeroIdentification, eligibleEmprunt);
         utilisateurs.add(utilisateur);
@@ -211,7 +211,7 @@ public class Main {
     }
     private static void verifierEligibiliteUtilisateurs() {
         for (Utilisateur utilisateur : utilisateurs) {
-            System.out.println(utilisateur.getNom() + " est éligible pour emprunter des livres : " + utilisateur.isEligibleEmprunt());
+            System.out.println(utilisateur.getNom() + " est elligible pour emprunter des livres : " + utilisateur.isEligibleEmprunt());
         }
     }
     
