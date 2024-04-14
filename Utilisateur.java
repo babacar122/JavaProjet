@@ -37,22 +37,6 @@ public class Utilisateur {
         this.livresEmpruntes = livresEmpruntes;
     }
 
-    public boolean isEligibleEmprunt() {
-        return eligibleEmprunt;
-    }
-
-    public void setEligibleEmprunt(boolean eligibleEmprunt) {
-        this.eligibleEmprunt = eligibleEmprunt;
-    }
-
-    public void emprunterLivre(Livre livre) {
-        if (eligibleEmprunt) {
-            livresEmpruntes.add(livre);
-            System.out.println("Livre emprunté avec succès.");
-        } else {
-            System.out.println("Désolé, vous n'êtes pas éligible pour emprunter des livres pour le moment.");
-        }
-    }
 
     public void retournerLivre(Livre livre) {
         if (livresEmpruntes.remove(livre)) {
@@ -66,6 +50,19 @@ public class Utilisateur {
         System.out.println("Livres empruntés par " + nom + " :");
         for (Livre livre : livresEmpruntes) {
             System.out.println(livre);
+        }
+    }
+
+    public boolean isEligibleEmprunt() {
+        return livresEmpruntes.size() < 4;
+    }
+
+    public void emprunterLivre(Livre livre) {
+        if (isEligibleEmprunt()) {
+            livresEmpruntes.add(livre);
+            System.out.println("Livre emprunté avec succès.");
+        } else {
+            System.out.println("Désolé, vous avez déjà emprunté 4 livres et n'êtes pas éligible pour en emprunter d'autres pour le moment.");
         }
     }
 }
