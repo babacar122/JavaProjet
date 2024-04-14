@@ -26,7 +26,7 @@ public class Main {
                     gestionUtilisateurs(); 
                     break;
                 case 4:
-                    System.out.println("A bientot !");
+                    System.out.println("A biento !");
                     break;
                 default:
                     System.out.println("Choix invalide, veuillez réessayer.");
@@ -81,9 +81,9 @@ public class Main {
     }
 
     private static void rechercherLivre() {
-        System.out.println("Entrez le critère de recherche (titre, auteur ou ISBN) :");
-        String critere = scanner.nextLine();
-        bibliotheque.rechercherLivre(critere);
+        System.out.println("Entrez l'option de recherche (titre, auteur ou ISBN) :");
+        String option = scanner.nextLine();
+        bibliotheque.rechercherLivre(option);
     }
 
     private static void supprimerLivre() {
